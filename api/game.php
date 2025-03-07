@@ -16,7 +16,7 @@ if ($_SERVER ['REQUEST_METHOD'] === 'POST'){
     // SAVE DATA
     $data = json_decode(file_get_contents("php://input"),true);
 
-   if (isset($data["number"])) {
+    if (isset($data["number"])) {
         file_put_contents($filename, json_encode($data, JSON_PRETTY_PRINT));
         echo "Number Saved";
     } else {
