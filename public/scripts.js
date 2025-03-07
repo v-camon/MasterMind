@@ -1,5 +1,5 @@
 async function loadMatch() {
-    const response = await fetch('/server/game.php');
+    const response = await fetch('../server/game.php');
     const data = await response.json();
     document.getElementById('number').innerText = JSON.stringify(data);
     
@@ -13,7 +13,7 @@ async function saveMatch() {
 
     const number = document.getElementById('numberInput').value;
 
-    await fetch ("/server/game.php", {
+    await fetch ("../server/game.php", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
